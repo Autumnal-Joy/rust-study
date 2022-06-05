@@ -1,5 +1,3 @@
-#![allow(unused)]
-
 use std::fmt;
 
 pub fn debug_display() {

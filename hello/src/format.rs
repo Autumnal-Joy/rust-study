@@ -1,5 +1,3 @@
-#![allow(unused)]
-
 pub fn r#format() {
     // 将格式化文本写到字符串
     dbg!(format!("Hello World"));

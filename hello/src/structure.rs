@@ -1,5 +1,3 @@
-#![allow(unused)]
-
 pub fn structure() {
     // 类单元结构体
     #[derive(Debug)]

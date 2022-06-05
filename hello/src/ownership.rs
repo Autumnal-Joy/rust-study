@@ -1,5 +1,3 @@
-#![allow(unused)]
-
 pub fn ownership() {
     // 保存在栈上的标量, 赋值时以值拷贝
     {

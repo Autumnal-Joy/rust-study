@@ -1,5 +1,3 @@
-#![allow(unused)]
-
 pub fn r#enum() {
     // 枚举类型
     {

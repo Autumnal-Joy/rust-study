@@ -1,5 +1,3 @@
-#![allow(unused)]
-
 pub fn mutable() {
     // let 声明的变量默认不可变
     {

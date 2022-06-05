@@ -1,9 +1,12 @@
+#![allow(unused)]
+
 mod collection;
 mod debug_display;
 mod r#enum;
 mod exception;
 mod expression;
 mod r#format;
+mod generics;
 mod mutable;
 mod ownership;
 mod reference;
@@ -14,9 +17,10 @@ fn main() {
     // collection::collection();
     // debug_display::debug_display();
     // r#enum::r#enum();
-    exception::exception();
+    // exception::exception();
     // expression::expression();
     // r#format::r#format();
+    generics::generics();
     // mutable::mutable();
     // ownership::ownership();
     // reference::reference();

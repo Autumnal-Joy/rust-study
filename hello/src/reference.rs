@@ -1,5 +1,3 @@
-#![allow(unused)]
-
 pub fn reference() {
     // 引用变量, 不获取所有权
     {

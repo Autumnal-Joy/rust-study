@@ -1,5 +1,3 @@
-#![allow(unused)]
-
 pub fn collection() {
     // vector
     {

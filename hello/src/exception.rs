@@ -1,5 +1,3 @@
-#![allow(unused)]
-
 use std::{
     f64::INFINITY,
     fs::File,

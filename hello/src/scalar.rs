@@ -1,5 +1,3 @@
-#![allow(unused)]
-
 use std::mem;
 
 pub fn scalar() {

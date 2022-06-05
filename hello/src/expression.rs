@@ -1,5 +1,3 @@
-#![allow(unused)]
-
 pub fn expression() {
     // 函数表达式
     {
