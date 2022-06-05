@@ -6,12 +6,13 @@ mod r#enum;
 mod exception;
 mod expression;
 mod r#format;
-mod generics;
+mod lifetime;
 mod mutable;
 mod ownership;
 mod reference;
 mod scalar;
 mod structure;
+mod template;
 
 fn main() {
     // collection::collection();
@@ -20,10 +21,11 @@ fn main() {
     // exception::exception();
     // expression::expression();
     // r#format::r#format();
-    generics::generics();
+    lifetime::lifetime();
     // mutable::mutable();
     // ownership::ownership();
     // reference::reference();
     // scalar::scalar();
     // structure::structure();
+    // template::template();
 }
