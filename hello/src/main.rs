@@ -13,6 +13,7 @@ mod reference;
 mod scalar;
 mod structure;
 mod template;
+mod test;
 
 fn main() {
     // collection::collection();
@@ -21,7 +22,7 @@ fn main() {
     // exception::exception();
     // expression::expression();
     // r#format::r#format();
-    lifetime::lifetime();
+    // lifetime::lifetime();
     // mutable::mutable();
     // ownership::ownership();
     // reference::reference();

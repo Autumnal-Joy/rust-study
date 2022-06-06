@@ -25,7 +25,7 @@ pub fn lifetime() {
         let str1 = "1234";
         {
             let str2 = "123456";
-            println!("{}", longest(str1, str2));
+            dbg!(longest(str1, str2));
         }
     }
 
@@ -84,6 +84,6 @@ pub fn lifetime() {
             x = s;
             y = "I have a static lifetime.";
         }
-        println!("{x}, {y}");
+        dbg!(&x, &y);
     }
 }

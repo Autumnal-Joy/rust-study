@@ -63,6 +63,6 @@ pub fn structure() {
             top_left: Point(1.0, 2.0),
             bottom_right: Point(3.0, 0.0),
         };
-        println!("{:?}", rec.area());
+        dbg!(rec.area());
     }
 }

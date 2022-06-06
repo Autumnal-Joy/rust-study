@@ -17,6 +17,8 @@
     - [3.2.1. debug 模式](#321-debug-模式)
     - [3.2.2. release 模式](#322-release-模式)
   - [3.3. 编译并运行](#33-编译并运行)
+  - [测试](#测试)
+    - [测试参数](#测试参数)
 - [4. rust-analyzer](#4-rust-analyzer)
   - [4.1. 补全](#41-补全)
 
@@ -131,6 +133,21 @@ cargo build -r
 cargo run
 # cargo run -r
 ```
+
+## 测试
+
+```shell
+cargo test
+```
+
+### 测试参数
+
+| command                       | desription                          |
+| ----------------------------- | ----------------------------------- |
+| cargo test fn                 | run all tests with 'fn' in the name |
+| cargo test -- --ignored       | run only the ignored tests          |
+| cargo test -- --test-thread=1 | set the number of test threads to 1 |
+| cargo test -- --show-output   | show the output of successful tests |
 
 # 4. rust-analyzer
 

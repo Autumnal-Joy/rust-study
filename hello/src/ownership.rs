@@ -3,7 +3,7 @@ pub fn ownership() {
     {
         let x = 5;
         let y = x;
-        dbg!(x, y);
+        dbg!(&x, &y);
     }
 
     // 保存在堆上的数据, 赋值时转移所有权
@@ -17,7 +17,7 @@ pub fn ownership() {
     {
         let x = String::from("hello");
         let y = x.clone();
-        println!("{x}, {y}");
+        dbg!(&x, &y);
     }
 
     // 传参时转移所有权, 函数表达式赋值时转移所有权

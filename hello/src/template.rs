@@ -40,7 +40,7 @@ pub fn template() {
                     format!("{} (by {})", self.content, self.author)
                 }
             }
-            println!("{}", article.summarize());
+            dbg!(article.summarize());
         }
 
         {
@@ -51,7 +51,7 @@ pub fn template() {
                 }
             }
             impl Summary for NewsArticle {}
-            println!("{}", article.summarize());
+            dbg!(article.summarize());
         }
 
         {
@@ -67,7 +67,7 @@ pub fn template() {
                     format!("@{}", self.author)
                 }
             }
-            println!("{}", article.summarize());
+            dbg!(article.summarize());
         }
 
         {
@@ -77,26 +77,26 @@ pub fn template() {
             }
             // trait bound
             fn notify1<T: Summary>(item: &T) {
-                println!("{}", item.summarize());
+                dbg!(item.summarize());
             }
             // 简化写法
             fn notify2(item: &impl Summary) {
-                println!("{}", item.summarize());
+                dbg!(item.summarize());
             }
             // 多个 trait bound
             fn notify3<T: Summary + Display>(item: &T) {
-                println!("{}", item.summarize());
+                dbg!(item.summarize());
             }
             // 简化写法
             fn notify4(item: &(impl Summary + Display)) {
-                println!("{}", item.summarize());
+                dbg!(item.summarize());
             }
             // 后置 trait bound
             fn notify5<T>(item: &T)
             where
                 T: Summary + Display,
             {
-                println!("{}", item.summarize());
+                dbg!(item.summarize());
             }
         }
 
@@ -130,7 +130,7 @@ pub fn template() {
                 max
             }
             let arr = vec![3, 1, 4, 2, 5];
-            println!("{}", max(&arr));
+            dbg!(max(&arr));
         }
     }
 }
