@@ -6,6 +6,7 @@ mod r#enum;
 mod exception;
 mod expression;
 mod r#format;
+mod functional;
 mod lifetime;
 mod mutable;
 mod ownership;
@@ -22,6 +23,7 @@ fn main() {
     // exception::exception();
     // expression::expression();
     // r#format::r#format();
+    functional::functional();
     // lifetime::lifetime();
     // mutable::mutable();
     // ownership::ownership();
