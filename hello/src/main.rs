@@ -12,13 +12,13 @@ mod lifetime;
 mod mutable;
 mod oop;
 mod ownership;
+mod pattern;
 mod reference;
 mod scalar;
 mod smart_pointer;
 mod structure;
 mod template;
 mod test;
-
 fn main() {
     // collection::collection();
     // concurrency::concurrency();
@@ -30,8 +30,9 @@ fn main() {
     // functional::functional();
     // lifetime::lifetime();
     // mutable::mutable();
-    oop::oop();
+    // oop::oop();
     // ownership::ownership();
+    pattern::pattern();
     // reference::reference();
     // scalar::scalar();
     // smart_pointer::smart_pointer();
