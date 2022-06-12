@@ -12,6 +12,7 @@ mod mutable;
 mod ownership;
 mod reference;
 mod scalar;
+mod smart_pointer;
 mod structure;
 mod template;
 mod test;
@@ -23,12 +24,13 @@ fn main() {
     // exception::exception();
     // expression::expression();
     // r#format::r#format();
-    functional::functional();
+    // functional::functional();
     // lifetime::lifetime();
     // mutable::mutable();
     // ownership::ownership();
     // reference::reference();
     // scalar::scalar();
+    smart_pointer::smart_pointer();
     // structure::structure();
     // template::template();
 }
