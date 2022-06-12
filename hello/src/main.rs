@@ -1,6 +1,7 @@
 #![allow(unused)]
 
 mod collection;
+mod concurrency;
 mod debug_display;
 mod r#enum;
 mod exception;
@@ -19,6 +20,7 @@ mod test;
 
 fn main() {
     // collection::collection();
+    concurrency::concurrency();
     // debug_display::debug_display();
     // r#enum::r#enum();
     // exception::exception();
@@ -30,7 +32,7 @@ fn main() {
     // ownership::ownership();
     // reference::reference();
     // scalar::scalar();
-    smart_pointer::smart_pointer();
+    // smart_pointer::smart_pointer();
     // structure::structure();
     // template::template();
 }
