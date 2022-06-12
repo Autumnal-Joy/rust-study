@@ -10,6 +10,7 @@ mod r#format;
 mod functional;
 mod lifetime;
 mod mutable;
+mod oop;
 mod ownership;
 mod reference;
 mod scalar;
@@ -20,7 +21,7 @@ mod test;
 
 fn main() {
     // collection::collection();
-    concurrency::concurrency();
+    // concurrency::concurrency();
     // debug_display::debug_display();
     // r#enum::r#enum();
     // exception::exception();
@@ -29,6 +30,7 @@ fn main() {
     // functional::functional();
     // lifetime::lifetime();
     // mutable::mutable();
+    oop::oop();
     // ownership::ownership();
     // reference::reference();
     // scalar::scalar();
