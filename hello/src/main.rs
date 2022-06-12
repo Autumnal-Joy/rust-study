@@ -19,6 +19,9 @@ mod smart_pointer;
 mod structure;
 mod template;
 mod test;
+mod r#trait;
+mod r#unsafe;
+
 fn main() {
     // collection::collection();
     // concurrency::concurrency();
@@ -32,10 +35,12 @@ fn main() {
     // mutable::mutable();
     // oop::oop();
     // ownership::ownership();
-    pattern::pattern();
+    // pattern::pattern();
     // reference::reference();
     // scalar::scalar();
     // smart_pointer::smart_pointer();
     // structure::structure();
     // template::template();
+    // r#trait::r#trait();
+    // r#unsafe::r#unsafe();
 }

@@ -1,36 +1,57 @@
 pub fn functional() {
     {
-        // 闭包 closure, 本质是自动捕获外界变量的 lambda 表达式
-        let x = 10;
-        let equal_to_x = |y| x == y;
-    }
-
-    {
-        // Fn trait
-        struct Cacher<T: Fn(u32) -> u32> {
-            calculation: T,
-            value: Option<u32>,
+        // 闭包 closure
+        {
+            // 默认捕获引用
+            let x = 10;
+            let equal_to_x = |y| x == y;
         }
 
-        impl<T: Fn(u32) -> u32> Cacher<T> {
-            fn new(calculation: T) -> Cacher<T> {
-                Cacher {
-                    calculation,
-                    value: None,
-                }
+        {
+            // 显式获取所有权
+            let x = 10;
+            let equal_to_x = move |y| x == y;
+        }
+
+        {
+            // Fn trait
+            struct Cacher<T: Fn(u32) -> u32> {
+                calculation: T,
+                value: Option<u32>,
             }
 
-            fn value(&mut self, arg: u32) -> u32 {
-                match self.value {
-                    Some(v) => v,
-                    None => {
-                        let v = (self.calculation)(arg);
-                        self.value = Some(v);
-                        v
+            impl<T: Fn(u32) -> u32> Cacher<T> {
+                fn new(calculation: T) -> Cacher<T> {
+                    Cacher {
+                        calculation,
+                        value: None,
+                    }
+                }
+
+                fn value(&mut self, arg: u32) -> u32 {
+                    match self.value {
+                        Some(v) => v,
+                        None => {
+                            let v = (self.calculation)(arg);
+                            self.value = Some(v);
+                            v
+                        }
                     }
                 }
             }
         }
+    }
+
+    {
+        // 函数指针
+        fn add_one(x: i32) -> i32 {
+            x + 1
+        }
+
+        fn do_twice(f: fn(i32) -> i32, arg: i32) -> i32 {
+            f(f(arg))
+        }
+        dbg!(do_twice(add_one, 5));
     }
 
     {
@@ -55,7 +76,7 @@ pub fn functional() {
         // 迭代器适配器: map
         let v1: Vec<String> = v
             .iter()
-            .map(|s| s.to_string())
+            .map(ToString::to_string)
             .map(|mut x| {
                 x.push('x');
                 x
